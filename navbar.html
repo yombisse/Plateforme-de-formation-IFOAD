@@ -1,0 +1,236 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <!-- Logo gauche -->
+    <div class="d-flex align-items-center">
+      <img src="IMG/ifoad.jpeg" alt="IFOAD" class="me-2" width="90" height="50">
+    </div>
+
+    <!-- Toggle bouton responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenu de la barre -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+
+        <!-- Accueil -->
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Accueil</a>
+        </li>
+
+        <!-- Historique -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Historique</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="UJKZ.html">UJKZ</a></li>
+            <li><a class="dropdown-item" href="ifoad.html">IFOAD</a></li>
+            <li><a class="dropdown-item" href="sia.html">Licence en SIA</a></li>
+          </ul>
+        </li>
+
+        <!-- Formation -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="afficherContenu('formation-onglet')">Formation</a>
+        </li>
+
+        <!-- Sous-onglets formation -->
+        <li class="nav-item ms-3 sous-onglets d-none" id="formation-onglet">
+          <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Licence-onglet')">Licence</a>
+          <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Master-onglet')">Master</a>
+          <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Debouche-onglet')">Débouchés</a>
+        </li>
+
+        <!-- Documentation -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="afficherContenu('documentation-onglet')">Documentation</a>
+        </li>
+
+        <!-- Sous-onglets documentation -->
+        <li class="nav-item ms-3 sous-onglets d-none" id="documentation-onglet">
+          <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('licence-onglet')">Licence</a>
+          <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('master-onglet')">Master</a>
+        </li>
+
+        <!-- Établissement -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Établissement</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-sea/">SEA</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/ibam/">IBAM</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/issp/">ISSP</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/igedd/">IGEED</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-sh/">SH</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-lac/">LAC</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-svt/">SVT</a></li>
+            <li><a class="dropdown-item" href="https://www.ujkz.bf/issdh/">ISSDH</a></li>
+          </ul>
+        </li>
+
+        <!-- Autres liens -->
+        <li class="nav-item"><a class="nav-link" href="partenaire.html">Partenaires</a></li>
+        <li class="nav-item"><a class="nav-link" href="traitement.html">Traitement</a></li>
+      </ul>
+
+      <!-- Logo droite -->
+      <div class="d-flex align-items-center">
+        <img src="IMG/ujkz.jpeg" alt="UJKZ" class="me-2" width="90" height="50">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenus onglets dynamiques -->
+<div id="Licence-onglet" class="contenu-section">
+  <h2>🎓 Licence en Sciences Informatiques Appliquées – IFOAD UJKZ</h2>
+  <p>La Licence en Sciences Informatiques Appliquées (SIA) de l’IFOAD-UJKZ est une formation à distance structurée selon le système LMD (Licence-Master-Doctorat).</p>
+
+  <h3>📘 Organisation de la formation</h3>
+  <ul>
+    <li><strong>Durée :</strong> 3 ans (6 semestres)</li>
+    <li><strong>Mode :</strong> Cours en ligne via la plateforme Moodle, avec des regroupements présentiels pour les travaux pratiques et certaines évaluations</li>
+    <li><strong>Structure :</strong> Tronc commun les deux premières années, spécialisation en troisième année</li>
+  </ul>
+
+  <h3>🔧 Spécialisations en 3e année</h3>
+  <ul>
+    <li>Génie logiciel</li>
+    <li>Réseaux et systèmes</li>
+  </ul>
+
+  <h3>🎯 Objectifs pédagogiques</h3>
+  <p>Le programme vise à :</p>
+  <ul>
+    <li>Développer des compétences techniques en informatique</li>
+    <li>Favoriser l'employabilité des diplômés</li>
+    <li>Intégrer des projets et stages pratiques pour une meilleure immersion professionnelle</li>
+  </ul>
+
+  <h3>📝 Conditions d’admission</h3>
+  <ul>
+    <li>Être titulaire du baccalauréat série D, C, E, F2 ou H</li>
+    <li>Soumettre un dossier de candidature comprenant :
+      <ul>
+        <li>Formulaire de candidature dûment rempli</li>
+        <li>Extrait d'acte de naissance</li>
+        <li>Lettre de motivation</li>
+        <li>Curriculum Vitae à jour</li>
+        <li>Copies simples de l'attestation de réussite et du relevé de notes du baccalauréat</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>📌 Informations supplémentaires</h3>
+  <p>Pour plus de détails sur la formation, les modalités d'inscription et les dates importantes, veuillez consulter le site officiel de l'IFOAD de l'Université Joseph KI-ZERBO ou contacter l'institut directement.</p>
+  <p>📄 <a href="https://www.ujkz.bf/wp-content/uploads/2024/07/IFOA-Licdnce-en-informatique-applique.pdf" target="_blank" rel="noopener noreferrer">Télécharger la fiche de formation (PDF)</a></p>
+</div>
+
+<div id="Master-onglet" class="contenu-section">
+  <h2>🎓 Master à l'IFOAD - Université Joseph KI-ZERBO</h2>
+  <p>Les formations de master à l'IFOAD sont conçues selon le système Licence-Master-Doctorat (LMD) et se déroulent principalement à distance, avec des regroupements présentiels ponctuels.</p>
+  
+  <h3>📚 Organisation de la formation</h3>
+  <ul>
+    <li><strong>Durée :</strong> 2 ans (4 semestres)</li>
+    <li><strong>Mode :</strong> Enseignement à distance via une plateforme dédiée, complété par des sessions en présentiel</li>
+    <li><strong>Suivi :</strong> Tutorat interactif et accès à des ressources pédagogiques multimédias</li>
+  </ul>
+  
+  <h3>🎯 Objectifs pédagogiques</h3>
+  <p>Les programmes de master visent à :</p>
+  <ul>
+    <li>Fournir une expertise approfondie dans des domaines spécialisés</li>
+    <li>Développer des compétences professionnelles adaptées au marché du travail</li>
+    <li>Favoriser la recherche et l'innovation dans les disciplines concernées</li>
+  </ul>
+  
+  <h3>📝 Conditions d'admission</h3>
+  <ul>
+    <li>Être titulaire d'un diplôme de niveau Bac+3 (Licence ou équivalent)</li>
+    <li>Soumettre un dossier de candidature complet, incluant :
+      <ul>
+        <li>Formulaire de candidature dûment rempli</li>
+        <li>Copies certifiées des diplômes et relevés de notes</li>
+        <li>Lettre de motivation</li>
+        <li>Curriculum Vitae à jour</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h3>📌 Informations supplémentaires</h3>
+  <p>Pour plus de détails sur les programmes de master offerts, les modalités d'inscription et les dates importantes, veuillez consulter le site officiel de l'IFOAD de l'Université Joseph KI-ZERBO ou contacter l'institut directement.</p>
+</div>
+
+
+<div id="Debouche-onglet" class="contenu-section">
+  <h2>🎯 Débouchés professionnels de la formation IFOAD</h2>
+  <p>Voici les débouchés possibles après une formation à l'IFOAD en Systèmes Informatiques Appliquées (SIA) :</p>
+  <ul>
+    <li>Développeur d'applications</li>
+    <li>Administrateur de bases de données</li>
+    <li>Technicien en réseaux et systèmes informatiques</li>
+    <li>Consultant en systèmes d'information</li>
+    <li>Chef de projet informatique</li>
+    <li>Formateur en technologies de l'information</li>
+    <li>Chargé de mission en transformation numérique</li>
+  </ul>
+  <h3>Spécialisations possibles en troisième année :</h3>
+  <ul>
+    <li>Génie logiciel</li>
+    <li>Réseaux et systèmes</li>
+  </ul>
+  <p class="text-muted">Ces compétences sont recherchées dans divers secteurs tels que les entreprises privées, les ONG, les administrations publiques, les institutions éducatives et les cabinets de conseil.</p>
+</div>
+
+
+<<div id="licence-onglet" class="contenu-section">
+  <h2>🎓 Licence à l'IFOAD</h2>
+  <p>Les étudiants inscrits en Licence à l'IFOAD suivent un parcours pluridisciplinaire à distance. Voici les principales ressources nécessaires :</p>
+  <ul>
+    <li>Plateformes pédagogiques (Moodle, CampusFaso)</li>
+    <li>Outils de productivité (Microsoft Office, LibreOffice)</li>
+    <li>Compétences en communication numérique</li>
+    <li>Accès aux bibliothèques numériques et ressources en ligne</li>
+  </ul>
+</div>
+
+<div id="master-onglet" class="contenu-section">
+  <h2>📚 Documentation Master</h2>
+   <!-- Section Master -->
+   
+    <h2>🎓 Formation Master à l'IFOAD</h2>
+    <p>Pour le niveau Master, les étudiants doivent suivre des formations approfondies dans des domaines spécialisés. Voici les ressources nécessaires :</p>
+    <ul>
+        <li>Plateformes avancées pour la gestion des cours et des projets</li>
+        <li>Outils spécifiques pour des formations en informatique et gestion</li>
+        <li>Références académiques et documents spécialisés</li>
+        <li>Accès à des tutoriels vidéo et forums de discussion entre étudiants et enseignants</li>
+    </ul>
+</div>
+</div>
+
+<!-- Fenêtre modale détachable -->
+<div id="content-window" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Contenu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body" id="content-placeholder">
+        <!-- Le contenu injecté s’affichera ici -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="fermerContenu()">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="onglet.js"></script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+

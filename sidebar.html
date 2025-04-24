@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+ 
+<nav class="sidebar">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a href="admission.html">Admission</a>
+        </li>
+        <!-- Formation -->
+        <li class="nav-item">
+            <div class="nav-link text-white" onclick="afficherContenu('section-programme')">Programme</div>
+            <div class="sous-onglets d-none ms-3" id="section-programme">
+                <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Licence1')">Licence1</a>
+                <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Licence2')">Licence2</a>
+                <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Licence3')">Licence3</a>
+                <a class="d-block nav-link text-secondary" href="#" onclick="afficherContenu('Master')">Master</a>
+            </div>
+        </li>
+        <!-- Personnel -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Personnel</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="enseignants.html" style="color: black;">Enseignants</a></li>
+                <li><a class="dropdown-item" href="personnelATOS.html"  style="color: black;">Personnel ATOS</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="actualite.html">Actualités et informations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+    </ul>
+</nav>
+<!-- Contenu principal -->
+<div class="main-container">
+    <div class="contenu-section d-none" id="Licence1">
+      <h3>Licence1</h3>
+      <p>Semestre 1 :</p>
+      <img src="IMG/S1.png" alt="Semestre 1">
+      <p>Semestre 2 :</p>
+      <img src="IMG/S2.png" alt="Semestre 2">
+    </div>
+  
+    <div class="contenu-section d-none" id="Licence2">
+      <h3>Licence2</h3>
+      <p>Semestre 3 :</p>
+      <img src="IMG/S3.png" alt="Semestre 3">
+      <p>Semestre 4 :</p>
+      <img src="IMG/S4.png" alt="Semestre 4">
+    </div>
+  
+    <div class="contenu-section d-none" id="Licence3">
+      <h3>Licence3</h3>
+      <p>Spécialisation :</p>
+      <strong>Génie Logiciel</strong>
+      <img src="IMG/S5GL.png" alt="S5 GL">
+      <img src="IMG/S6GL.png" alt="S6 GL">
+      <strong>Réseaux et Systèmes</strong>
+      <img src="IMG/S5RS.png" alt="S5 RS">
+      <img src="IMG/S6RS.png" alt="S6 RS">
+    </div>
+  
+    <div class="contenu-section d-none" id="Master">
+      <h3>Master</h3>
+      <p>Informations sur les programmes de Master ici.</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+<script src="main.js"></script>
+<script src="onglet.js"></script>
+   
+</body>
+</html>

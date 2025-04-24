@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plateforme virtuelle de l'Institut de Formation Ouvert à Distance (IFOAD) de l'Université Joseph KI ZERBO">
+    <title>Plateforme UJKZ/IFOAD - Université Joseph KI ZERBO</title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="GetTime()">
+
+    <!-- Navbar et sidebar -->
+    <div id="navbar-placeholder" aria-live="polite"></div>
+    <div id="sidebar-placeholder" aria-live="polite"></div>
+
+    <!-- Conteneur principal -->
+    <main class="card" role="main">
+        <!-- Message de bienvenue -->
+        <section class="conteneur" aria-labelledby="welcome-title">
+            <h1 id="welcome-title" class="visually-hidden">Bienvenue</h1>
+            <p>
+                Bienvenue sur la plateforme virtuelle de l'Institut de Formation Ouvert à Distance (IFOAD)
+                de l'Université Joseph KI ZERBO.
+            </p>
+        </section>
+
+        <section class="conteneur-u text-center" aria-labelledby="universites-title">
+            <h2 id="universites-title" class="mb-4">Universités publiques et privées reconnues au Burkina Faso</h2>
+
+            <!-- Universités avec logo -->
+            <div class="universite-logos d-flex flex-wrap justify-content-center gap-4" role="list">
+                <!-- Chaque université -->
+                <a href="https://www.ujkz.bf/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                    <img src="IMG/ujkz.jpeg" alt="Logo Université Joseph KI-ZERBO" class="universite-logo" width="100" height="100">
+                    <span>U. Joseph KI-ZERBO</span>
+                </a>
+
+                <a href="https://www.univ-bobo.gov.bf/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                    <img src="IMG/unb.png" alt="Logo Université Nazi BONI" class="universite-logo" width="100" height="100">
+                    <span>U. Nazi BONI</span>
+                </a>
+
+                <a href="https://www.unz.bf/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                    <img src="IMG/unz.jpeg" alt="Logo Université Norbert ZONGO" class="universite-logo" width="100" height="100">
+                    <span>U. Norbert ZONGO</span>
+                </a>
+
+                <a href="https://www.uts.bf/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                    <img src="IMG/uts.png" alt="Logo Université Thomas SANKARA" class="universite-logo" width="100" height="100">
+                    <span>U. Thomas SANKARA</span>
+                </a>
+
+                <a href="https://www.facebook.com/Univerohg/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                    <img src="IMG/uohg.jpeg" alt="Logo Université de Ouahigouya" class="universite-logo" width="100" height="100">
+                    <span>U. de Ouahigouya</span>
+                </a>
+            </div>
+
+            <!-- Section Autres Universités -->
+            <section class="mt-5 autres-section" aria-labelledby="autres-universites-title">
+                <h3 id="autres-universites-title" style="cursor: pointer;">Autres universités</h3>
+                <div class="universite-logos" role="list">
+                    <a href="https://www.univ-dedougou.gov.bf/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                        <span>U. de Dédougou</span>
+                    </a>
+                    <a href="https://www.univ-bobo.gov.bf/etablissements/ufr-institut-cu/centre-universitaire-de-banfora" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                        <span>CUP de Banfora</span>
+                    </a>
+                    <a href="https://www.facebook.com/p/Universit%C3%A9-de-Fada-NGourma-100057314093719/" target="_blank" rel="noopener noreferrer" class="universite-item" role="listitem">
+                        <span>U. de Fada N'Gourma</span>
+                    </a>
+                    <a href="https://uv.bf/" target="_blank" rel="noopener noreferrer" class="universite-item autre-universite" role="listitem">
+                        <span>Université virtuelle du Burkina</span>
+                    </a>
+                    <a href="https://www.univ-bobo.gov.bf/etablissements/ufr-institut-cu/centre-universitaire-de-gaoua" target="_blank" rel="noopener noreferrer" class="universite-item autre-universite" role="listitem">
+                        <span>CUP de Gaoua</span>
+                    </a>
+                    <a href="https://www.oreilleducampus.org/centre-universitaire-polytechnique-dori.html" target="_blank" rel="noopener noreferrer" class="universite-item autre-universite" role="listitem">
+                        <span>CUP de Dori</span>
+                    </a>
+                    <a href="https://www.ujkz.bf/centre-universitaire-polytechnique-de-kaya/" target="_blank" rel="noopener noreferrer" class="universite-item autre-universite" role="listitem">
+                        <span>CUP de Kaya</span>
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <!-- Carousel -->
+        <section class="carousel-container mt-5" aria-label="Actualités">
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicateurs -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Images -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="IMG/drapeau.jpeg" class="d-block w-100" alt="Reprise des cours le 14/04/25" loading="lazy">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>Reprise des cours</h5>
+                            <p>Reprise des cours à partir du 14/04/25.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/etudiant.jpg" class="d-block w-100" alt="Étudiants sur le campus" loading="lazy">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>Vie étudiante</h5>
+                            <p>Découvrez la vie sur le campus.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/university.jpeg" class="d-block w-100" alt="Bâtiment de l'IFOAD" loading="lazy">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>IFOAD</h5>
+                            <p>Institut de Formation Ouvert à Distance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contrôles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </section>
+
+        <div id="horloge" aria-live="polite">
+            <form name="time" onsubmit="return false;">
+              <input type="text" name="heure" id="heure" readonly aria-label="Heure actuelle">
+            </form>
+        </div>
+          
+              
+
+    </main>
+
+    <!-- Fenêtre détachable -->
+    <div id="content-window" style="display: none;" aria-modal="true" aria-hidden="true">
+        <div id="content-placeholder"></div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder" ></div>
+
+    <!-- Scripts -->
+     <script>
+            function GetTime() {
+                const time = new Date();
+                let hours = time.getHours();
+                let minutes = time.getMinutes();
+                let seconds = time.getSeconds();
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                const heureElement = document.getElementById('heure');
+                if (heureElement) {
+                    heureElement.value = `${hours}:${minutes}:${seconds}`;
+                }
+
+                setTimeout(GetTime, 1000);
+            }
+        </script>    
+    <script src="main.js" defer></script>
+    <script src="onglet.js" defer></script>
+    
+    <!-- Chargement différé de Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

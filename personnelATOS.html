@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigramme IFOAD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">   
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div id="sidebar-placeholder"></div>
+  <div class="container py-4">
+        <h1 class="text-center mb-4">Organigramme IFOAD</h1>
+        
+        <div class="org-chart">
+            <!-- Niveau 1 - Direction -->
+            <div class="org-level">
+                <div class="org-node">
+                    <div class="org-card bg-primary text-white">
+                        <h5>Direction IFOAD</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Connecteur -->
+            <div style="height: 30px; text-align: center;">
+                <div style="display: inline-block; width: 2px; height: 100%; background-color: #6c757d;"></div>
+            </div>
+            
+            <!-- Niveau 2 - Direction et adjoint -->
+            <div class="org-level">
+                <div class="org-node">
+                    <div class="connector"></div>
+                    <div class="org-card">
+                        <h5>Directeur Administratif</h5>
+                        <p>Pr Marie Françoise OUEDRAOGO</p>
+                    </div>
+                </div>
+                
+                <div class="org-node">
+                    <div class="connector"></div>
+                    <div class="org-card">
+                        <h5>Directeur Adjoint</h5>
+                        <p>Dr Urbain TRAORE</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Connecteur -->
+            <div style="height: 30px; text-align: center;">
+                <div style="display: inline-block; width: 2px; height: 100%; background-color: #6c757d;"></div>
+            </div>
+            
+            <!-- Niveau 3 - Services -->
+            <div class="org-level">
+                <div class="org-node">
+                    <div class="connector"></div>
+                    <div class="org-card bg-success text-white">
+                        <h5>Secrétariat Général</h5>
+                        <p>Dr Urbain TRAORE</p>
+                    </div>
+                </div>
+                
+                <div class="org-node">
+                    <div class="connector"></div>
+                    <div class="org-card bg-info text-white">
+                        <h5>Scolarité</h5>
+                        <p>Josiane TIEMTORE/KONVOLBO</p>
+                    </div>
+                </div>
+                
+                <div class="org-node">
+                    <div class="connector"></div>
+                    <div class="org-card bg-warning text-dark">
+                        <h5>Service Technique</h5>
+                        <p>Moise DIEME</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="onglet.js"></script>
+    <script src="main.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

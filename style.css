@@ -1,0 +1,490 @@
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(226, 222, 222);
+}
+
+h2 {
+  color: #007bff;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ===============================
+   LAYOUT PRINCIPAL
+================================ */
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 3;
+}
+
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand-img {
+  margin-right: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 135px;
+  height: calc(100vh - 65px);
+  background-color: #333;
+  color: #fff;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.main-container,
+.card,
+.container {
+  margin-left: 140px;
+  padding: 1rem;
+  background-color: #f5f7fa;
+}
+
+/* ===============================
+   COMPOSANTS VISUELS
+================================ */
+.conteneur,
+.ujkz,
+.liste,
+.contenu-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+
+.ujkz {
+  border: 1px solid #000;
+  color: #000;
+  margin-left: 150px; /* pour éviter que la sidebar cache le contenu */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: justify; /* mieux pour les paragraphes */
+}
+
+.liste {
+  background-color: #f1f1f1;
+  border: 2px solid #a2d3f7;
+  text-align: justify;
+}
+
+.contenu-section {
+  display: none;
+  background-color: #e6f2ff;
+}
+
+.container-ifoad {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===============================
+   MODAL / FENÊTRE FLOTTANTE
+================================ */
+#content-window {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-footer {
+  border-top: 1px solid #e9ecef;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.modal-title {
+  font-weight: 600;
+  color: #212529;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.btn-close {
+  background-size: 60%;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+.modal.fade .modal-dialog {
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+/* ===============================
+   HORLOGE
+================================ */
+#horloge {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #a2d3f7;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+#horloge input[type="text"] {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  width: 80px;
+  outline: none;
+  cursor: default;
+}
+
+/* ===============================
+   CONTENU DYNAMIQUE
+================================ */
+#content-placeholder h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+#content-placeholder p {
+  line-height: 1.6;
+  color: #34495e;
+}
+
+#content-placeholder img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* ===============================
+   AUTRES COMPOSANTS
+================================ */
+.Tableau {
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.carousel-container {
+  position: relative;
+  z-index: 2;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.Conteneur-f {
+  border-radius: 2px;
+  background-color: #e6f2ff;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.title-bar {
+  background: #343a40;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contenu {
+  padding: 10px;
+  overflow: auto;
+  height: calc(100vh - 40px);
+  max-width: 100%;
+}
+
+/* ===============================
+   UNIVERSITÉS
+================================ */
+.liste-universites {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.conteneur-u:hover .liste-universites {
+  display: block;
+}
+
+.universite-logos {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.universite-item {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.universite-item span {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 20px;
+}
+
+.universite-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.universite-logo:hover {
+  transform: scale(1.1);
+}
+
+.autre-universite span:hover {
+  color: #007bff;
+}
+
+.autres-section:hover .universite-logos {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===============================
+   ORGANIGRAMME
+================================ */
+.org-chart {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.org-level {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.org-node {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: top;
+  position: relative;
+}
+
+.org-card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.org-card h5 {
+  margin-top: 0;
+  color: #333;
+}
+
+.org-card p {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+.connector {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #6c757d;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100vw;
+  border-top: 3px solid #fff;
+  position: relative;
+  left: 0;
+  margin-left: -25px;
+  margin-bottom: -25px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    border-bottom: 1px solid blue;
+  }
+
+  .card,
+  .container,
+  .main-container {
+    margin-left: 0;
+  }
+
+  .carousel-container {
+    width: 90%;
+  }
+
+  nav.navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  #content-window {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    max-height: 85vh;
+    padding: 15px;
+  }
+
+  .contenu {
+    padding: 5px;
+    height: calc(100vh - 60px);
+  }
+
+  .org-level {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .org-node {
+    margin: 10px 0;
+  }
+
+  .connector {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #content-window {
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    max-height: 90vh;
+    padding: 10px;
+  }
+
+  .title-bar {
+    font-size: 14px;
+  }
+
+  .contenu {
+    padding: 2px;
+    font-size: 12px;
+  }
+}
