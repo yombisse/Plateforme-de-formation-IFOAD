@@ -5,94 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculatrice Scientifique</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .calculator {
-      background-color: #f8f9fa;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 15px;
-      margin: 0 auto;
-    }
-    
-    .calculator-display {
-      background-color: #fff;
-      border: 1px solid #ced4da;
-      border-radius: 5px;
-      padding: 15px;
-      margin-bottom: 15px;
-      text-align: right;
-      font-size: 1.5rem;
-      height: 60px;
-      overflow: hidden;
-    }
-    
-    .calculator-keys {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-    
-    .calculator-btn {
-      border: none;
-      border-radius: 5px;
-      padding: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    
-    .calculator-btn:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-    }
-    
-    .btn-number {
-      background-color: #e9ecef;
-    }
-    
-    .btn-operator {
-      background-color: #f8f9fa;
-      font-weight: bold;
-    }
-    
-    .btn-function {
-      background-color: #dee2e6;
-    }
-    
-    .btn-clear {
-      background-color: #dc3545;
-      color: white;
-    }
-    
-    .btn-equals {
-      background-color: #0d6efd;
-      color: white;
-    }
-    
-    .history-panel {
-      height: 200px;
-      overflow-y: auto;
-      border: 1px solid #dee2e6;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-    
-    .card {
-      margin-bottom: 20px;
-    }
-    
-    @media (max-width: 768px) {
-      .calculator {
-        max-width: 100% !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="traitement.css">
+  <link rel="stylesheet" href="style.css">
+ 
 </head>
 <body onload="GetTime()">
   <div id="navbar-placeholder"></div>
   <div id="sidebar-placeholder"></div>
   
+  <div class="ujkz">
   <div class="container my-4">
     <h1 class="text-center mb-4">🧮 Calculatrice Scientifique</h1>
     
@@ -177,11 +98,11 @@
       </div>
     </div>
   </div>
+  </div>
 
   <div id="footer-placeholder"></div>
   
   <script src="main.js"></script>
-  <script src="naavbar-action.js"></script>
   <script src="onglet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>

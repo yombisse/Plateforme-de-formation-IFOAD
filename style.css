@@ -71,9 +71,7 @@ ul li {
 }
 
 
-/* ===============================
-   MODAL / FENÊTRE FLOTTANTE
-================================ */
+/*  MODAL / FENÊTRE FLOTTANTE*/
 #content-window {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -132,9 +130,7 @@ ul li {
   transform: translateY(0);
 }
 
-/* ===============================
-   HORLOGE
-================================ */
+/*HORLOGE*/
 #horloge {
   position: fixed;
   bottom: 10px;
@@ -162,9 +158,7 @@ ul li {
   cursor: default;
 }
 
-/* ===============================
-   CONTENU DYNAMIQUE
-================================ */
+/* CONTENU DYNAMIQUE */
 #content-placeholder h2 {
   color: #2c3e50;
   margin-top: 0;
@@ -184,9 +178,7 @@ ul li {
   margin: 1rem 0;
 }
 
-/* ===============================
-   UNIVERSITÉS
-================================ */
+/*UNIVERSITÉS*/
 .liste-universites {
   display: none;
   transition: all 0.3s ease;
@@ -293,16 +285,52 @@ ul li {
 
 /*FOOTER */
 footer {
-  background-color: green;
+  background-color: #2a7f2a; /* Version plus moderne du vert */
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: clamp(12px, 3vw, 20px) 0; /* Padding adaptatif */
   width: 100%;
-  border-top: 3px solid #fff;
+  border-top: 2px solid rgba(255, 255, 255, 0.3); /* Bordure plus subtile */
   position: relative;
   margin: 0 auto;
   box-sizing: border-box;
+  font-size: clamp(0.9rem, 2.5vw, 1rem); /* Taille de texte responsive */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
+
+/* Contenu du footer responsive */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+}
+
+/* Éléments enfants */
+footer p, 
+footer a {
+  margin: 0;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+
+/* Liens */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 .conteneur {
   background: #9fbbc2; border-left: 4px solid #2c3e50;
   padding: clamp(1rem, 3vw, 2.5rem); margin: 2rem auto;
@@ -378,6 +406,19 @@ footer {
     width: calc(100vw - 70px);
     margin-right: auto;
   }
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  
+  footer {
+    border-top-width: 1px;
+    padding: 15px 0;
+    margin-right: auto;
+    margin-left: 70px;
+    width: calc(100%-70px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -397,10 +438,18 @@ footer {
     padding: 2px;
     font-size: 12px;
   }
-}
-@media (max-width: 576px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  
   footer {
+    border-top-width: 1px;
+    margin-right: auto;
     padding: 10px 0;
     font-size: 0.9rem;
   }
 }
+
+
