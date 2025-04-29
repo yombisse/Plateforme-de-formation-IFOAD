@@ -5,47 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculatrice Scientifique</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
   <style>
-    :root {
-      --calc-bg: #2c3e50;
-      --btn-primary: #3498db;
-      --btn-secondary: #95a5a6;
-      --btn-danger: #e74c3c;
-      --btn-success: #2ecc71;
-    }
-    
     .calculator {
-      max-width: 400px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
       margin: 0 auto;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      background: var(--calc-bg);
-      color: white;
     }
     
     .calculator-display {
-      background: #34495e;
-      padding: 1.5rem;
+      background-color: #fff;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
       text-align: right;
-      font-size: 2rem;
-      min-height: 100px;
-      word-wrap: break-word;
+      font-size: 1.5rem;
+      height: 60px;
+      overflow: hidden;
     }
     
     .calculator-keys {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      padding: 20px;
+      gap: 8px;
     }
     
     .calculator-btn {
       border: none;
-      padding: 15px;
-      font-size: 1.2rem;
-      border-radius: 8px;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1rem;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -56,58 +47,58 @@
     }
     
     .btn-number {
-      background: var(--btn-secondary);
+      background-color: #e9ecef;
     }
     
     .btn-operator {
-      background: var(--btn-primary);
-    }
-    
-    .btn-equals {
-      background: var(--btn-success);
-      grid-column: span 2;
-    }
-    
-    .btn-clear {
-      background: var(--btn-danger);
+      background-color: #f8f9fa;
+      font-weight: bold;
     }
     
     .btn-function {
-      background: #9b59b6;
+      background-color: #dee2e6;
+    }
+    
+    .btn-clear {
+      background-color: #dc3545;
+      color: white;
+    }
+    
+    .btn-equals {
+      background-color: #0d6efd;
+      color: white;
     }
     
     .history-panel {
-      max-height: 200px;
+      height: 200px;
       overflow-y: auto;
-      background: rgba(255,255,255,0.1);
-      border-radius: 8px;
+      border: 1px solid #dee2e6;
       padding: 10px;
-      margin-top: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
     }
     
-    .history-item {
-      padding: 5px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+    .card {
+      margin-bottom: 20px;
     }
     
-    .scientific-keys {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 8px;
-      margin-top: 10px;
+    @media (max-width: 768px) {
+      .calculator {
+        max-width: 100% !important;
+      }
     }
   </style>
 </head>
 <body onload="GetTime()">
   <div id="navbar-placeholder"></div>
   <div id="sidebar-placeholder"></div>
-
-  <div class="container mt-4">
+  
+  <div class="container my-4">
     <h1 class="text-center mb-4">🧮 Calculatrice Scientifique</h1>
     
     <div class="row">
-      <div class="col-md-6">
-        <div class="calculator mb-4">
+      <div class="col-md-6 order-md-1 order-2">
+        <div class="calculator mb-4" style="max-width: 400px;">
           <div class="calculator-display" id="display">0</div>
           <div class="calculator-keys">
             <button class="calculator-btn btn-clear" onclick="clearDisplay()">AC</button>
@@ -134,30 +125,31 @@
             <button class="calculator-btn btn-number" onclick="addToDisplay('.')">.</button>
             <button class="calculator-btn btn-number" onclick="backspace()">←</button>
             <button class="calculator-btn btn-equals" onclick="calculate()">=</button>
+            
             <button class="calculator-btn btn-function" onclick="squareRoot()">√</button>
             <button class="calculator-btn btn-function" onclick="power()">x^y</button>
             <button class="calculator-btn btn-function" onclick="sin()">sin</button>
             <button class="calculator-btn btn-function" onclick="cos()">cos</button>
+            
             <button class="calculator-btn btn-function" onclick="tan()">tan</button>
             <button class="calculator-btn btn-function" onclick="log()">log</button>
             <button class="calculator-btn btn-function" onclick="ln()">ln</button>
             <button class="calculator-btn btn-function" onclick="factorial()">x!</button>
+            
             <button class="calculator-btn btn-function" onclick="addPi()">π</button>
             <button class="calculator-btn btn-function" onclick="addE()">e</button>
           </div>
-          
-          
         </div>
       </div>
       
-      <div class="col-md-6">
+      <div class="col-md-6 order-md-2 order-1 mb-4">
         <div class="card">
           <div class="card-header bg-primary text-white">
             Historique des calculs
           </div>
           <div class="card-body">
             <div class="history-panel" id="history">
-              <!-- L'historique apparaîtra ici -->
+              <!-- L'historique sera ajouté ici dynamiquement -->
             </div>
             <button class="btn btn-danger mt-3" onclick="clearHistory()">Effacer l'historique</button>
           </div>
@@ -169,7 +161,7 @@
           </div>
           <div class="card-body">
             <h5>Fonctions scientifiques :</h5>
-            <ul>
+            <ul class="mb-0">
               <li><strong>√</strong> : Racine carrée du nombre affiché</li>
               <li><strong>x^y</strong> : Premier nombre puissance deuxième nombre</li>
               <li><strong>sin/cos/tan</strong> : Fonctions trigonométriques (en radians)</li>
@@ -178,7 +170,7 @@
               <li><strong>x!</strong> : Factorielle</li>
               <li><strong>π</strong> : Insère la constante Pi (3.1416...)</li>
               <li><strong>e</strong> : Insère la constante d'Euler (2.718...)</li>
-              <li><strong>NB</strong> : Il faut inserer le nombre en premier avant de cliquer sur la fonction Ex: pour racine(4) il faut cliquer sur 4 ensuite sur la fonction √ </li>
+              <li><strong>NB</strong> : Il faut insérer le nombre en premier avant de cliquer sur la fonction. Ex: pour √(4) il faut cliquer sur 4 ensuite sur la fonction √</li>
             </ul>
           </div>
         </div>
@@ -187,10 +179,6 @@
   </div>
 
   <div id="footer-placeholder"></div>
-  
-  <script>
-   
-  </script>
   
   <script src="main.js"></script>
   <script src="naavbar-action.js"></script>

@@ -8,82 +8,100 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="GetTime()">
-    <div id="navbar-placeholder"></div>
-    <div id="sidebar-placeholder"></div>
-    <div id="onglet-placeholder"></div>
-    
 
-        <div class="container">
-            <h1 class="text-center mt-5">Partenaires de l'IFOAD de l'Université Joseph Ki-Zerbo (UJKZ)</h1>
-            <div class="row text-center mt-4">
-                <!-- Partenaire AUF -->
-                <div class="col-md-4">
-                    <a href="https://www.auf.org/" target="_blank">
-                        <img src="IMG/AUF.jpeg" alt="AUF" class="img-fluid">
-                        <h4>Agence Universitaire de la Francophonie (AUF)</h4>
-                    </a>
-                </div>
-                <!-- Partenaire Musée National du Burkina Faso -->
-                <div class="col-md-4">
-                    <a href="https://www.ujkz.bf/" target="_blank">
-                        <img src="IMG/Musee.jpeg" alt="Musée National" class="img-fluid">
-                        <h4>Musée National du Burkina Faso</h4>
-                    </a>
-                </div>
-                <!-- Partenaire Maison de l'Entreprise -->
-                <div class="col-md-4">
-                    <a href="https://www.lefaso.net/spip.php?article129788" target="_blank">
-                        <img src="IMG/maison_entreprise.jpeg" alt="Maison de l'Entreprise" class="img-fluid">
-                        <h4>Maison de l'Entreprise du Burkina Faso</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="row text-center mt-4">
-                <!-- Partenaire CEFORGRIS -->
-                <div class="col-md-4">
-                    <a href="https://cea-ceforgris.org/partenaires" target="_blank">
-                        <img src="IMG/CEFRG.jpeg" alt="CEFORGRIS" class="img-fluid">
-                        <h4>Centre d’Études, de Formation et de Recherche en Gestion des Risques Sociaux (CEFORGRIS)</h4>
-                    </a>
-                </div>
-                <!-- Partenaire CFOREM -->
-                <div class="col-md-4" >
-                    <a href="https://www.ujkz.bf/recrutement/" target="_blank">
-                        <img src="IMG/cforem.jpg" alt="CFOREM" class="img-fluid" style="margin-top: 100px;">
-                        <h4>Centre de Formation, de Recherche et d’Expertise en Sciences du Médicament (CFOREM)</h4>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Contenus onglets -->
-<div id="Licence-onglet" class="contenu-section">
-  <h2>Contenu Formation</h2>
-  <p>Voici les informations détaillées sur les licences et masters disponibles.</p>
-</div>
-<div id="Master-onglet" class="contenu-section">
-  <h2>Contenu Formation</h2>
-  <p>Voici les informations détaillées sur les licences et masters disponibles.</p>
-</div>
-<div id="Debouche-onglet" class="contenu-section">
-  <h2>Debouchées de SIA</h2>
-  <p>Voici les informations détaillées sur les licences et masters disponibles.</p>
-</div>
-<div id="licence-onglet" class="contenu-section">
-  <h2>Contenu Documentation</h2>
-  <p>Voici la documentation relative aux modules de cours et aux outils numériques.</p>
-</div>
-<div id="master-onglet" class="contenu-section">
-  <h2>Contenu Documentation</h2>
-  <p>Voici la documentation relative aux modules de cours et aux outils numériques.</p>
-</div>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
 
-<!-- Fenêtre flottante -->
+  <!-- Sidebar -->
+  <div id="sidebar-placeholder"></div>
 
-    
-         <div id="footer-placeholder"></div>
-<!-- Scripts JS -->
-          <script src="main.js" defer></script>
-          <script src="onglet.js" defer></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- Onglets dynamiques -->
+  <div id="onglet-placeholder"></div>
+
+  <!-- Partenaires -->
+  <div class="ujkz">
+    <h1 class="text-center mt-5">
+      Partenaires de l'IFOAD de l'Université Joseph Ki-Zerbo (UJKZ)
+    </h1>
+
+    <div class="row text-center mt-4">
+      <!-- AUF -->
+      <div class="col-md-4">
+        <a href="https://www.auf.org/" target="_blank">
+          <img src="IMG/AUF.jpeg" alt="AUF" class="img-fluid">
+          <h4>Agence Universitaire de la Francophonie (AUF)</h4>
+        </a>
+      </div>
+
+      <!-- Musée National -->
+      <div class="col-md-4">
+        <a href="https://www.ujkz.bf/" target="_blank">
+          <img src="IMG/Musee.jpeg" alt="Musée National" class="img-fluid">
+          <h4>Musée National du Burkina Faso</h4>
+        </a>
+      </div>
+
+      <!-- Maison de l'Entreprise -->
+      <div class="col-md-4">
+        <a href="https://www.lefaso.net/spip.php?article129788" target="_blank">
+          <img src="IMG/maison_entreprise.jpeg" alt="Maison de l'Entreprise" class="img-fluid">
+          <h4>Maison de l'Entreprise du Burkina Faso</h4>
+        </a>
+      </div>
+    </div>
+
+    <div class="row text-center mt-4">
+      <!-- CEFORGRIS -->
+      <div class="col-md-4">
+        <a href="https://cea-ceforgris.org/partenaires" target="_blank">
+          <img src="IMG/CEFRG.jpeg" alt="CEFORGRIS" class="img-fluid">
+          <h4>Centre d’Études, de Formation et de Recherche en Gestion des Risques Sociaux (CEFORGRIS)</h4>
+        </a>
+      </div>
+
+      <!-- CFOREM -->
+      <div class="col-md-4">
+        <a href="https://www.ujkz.bf/recrutement/" target="_blank">
+          <img src="IMG/cforem.jpg" alt="CFOREM" class="img-fluid mt-5">
+          <h4>Centre de Formation, de Recherche et d’Expertise en Sciences du Médicament (CFOREM)</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenus des onglets -->
+  <div id="Licence-onglet" class="contenu-section">
+    <h2>Contenu Formation</h2>
+    <p>Voici les informations détaillées sur les licences et masters disponibles.</p>
+  </div>
+
+  <div id="Master-onglet" class="contenu-section">
+    <h2>Contenu Formation</h2>
+    <p>Voici les informations détaillées sur les licences et masters disponibles.</p>
+  </div>
+
+  <div id="Debouche-onglet" class="contenu-section">
+    <h2>Debouchées de SIA</h2>
+    <p>Voici les informations détaillées sur les licences et masters disponibles.</p>
+  </div>
+
+  <div id="licence-onglet" class="contenu-section">
+    <h2>Contenu Documentation</h2>
+    <p>Voici la documentation relative aux modules de cours et aux outils numériques.</p>
+  </div>
+
+  <div id="master-onglet" class="contenu-section">
+    <h2>Contenu Documentation</h2>
+    <p>Voici la documentation relative aux modules de cours et aux outils numériques.</p>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts JS -->
+  <script src="main.js" defer></script>
+  <script src="onglet.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
+
 </body>
 </html>

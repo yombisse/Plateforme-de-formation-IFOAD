@@ -1,6 +1,4 @@
-/* ===============================
-   RESET & BASE
-================================ */
+/*Style globale*/
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +8,8 @@
 html, body {
   font-family: Helvetica, sans-serif;
   overflow-x: hidden;
-  background-color: rgb(226, 222, 222);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
 }
 
 h2 {
@@ -31,91 +30,33 @@ ul li {
   margin-top: 50px;
 }
 
-/* ===============================
-   LAYOUT PRINCIPAL
-================================ */
-nav.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 65px;
-  background-color: #e74c3c;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  z-index: 3;
-}
+/*COMPOSANTS VISUELS*/
 
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand-img {
-  margin-right: 10px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 65px;
-  left: 0;
-  width: 135px;
-  height: calc(100vh - 65px);
-  background-color: #333;
-  color: #fff;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.sidebar a:hover {
-  background-color: #555;
-}
-
-.main-container,
-.card,
-.container {
-  margin-left: 140px;
-  padding: 1rem;
-  background-color: #f5f7fa;
-}
-
-/* ===============================
-   COMPOSANTS VISUELS
-================================ */
-.conteneur,
 .ujkz,
 .liste,
 .contenu-section {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  margin: 20px auto;
+  margin-left: 135px;
+  
   max-width: 90%;
 }
-
 
 .ujkz {
   border: 1px solid #000;
   color: #000;
-  margin-left: 150px; /* pour éviter que la sidebar cache le contenu */
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  text-align: justify; /* mieux pour les paragraphes */
+  text-align: justify;
+  padding: 1rem 1rem;
+  margin-right: 1rem;
+  
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
+}
+.carousel-container{
+  width: 60%;
+  margin: 1rem auto;
+
 }
 
 .liste {
@@ -129,14 +70,6 @@ nav.navbar {
   background-color: #e6f2ff;
 }
 
-.container-ifoad {
-  max-width: 960px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
 
 /* ===============================
    MODAL / FENÊTRE FLOTTANTE
@@ -252,45 +185,6 @@ nav.navbar {
 }
 
 /* ===============================
-   AUTRES COMPOSANTS
-================================ */
-.Tableau {
-  text-align: center;
-  margin: 0 auto;
-  border-collapse: collapse;
-  width: 80%;
-}
-
-.carousel-container {
-  position: relative;
-  z-index: 2;
-  margin: 20px auto;
-  width: 50%;
-}
-
-.Conteneur-f {
-  border-radius: 2px;
-  background-color: #e6f2ff;
-  margin: 100px auto;
-  padding: 20px;
-}
-
-.title-bar {
-  background: #343a40;
-  color: #fff;
-  padding: 5px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.contenu {
-  padding: 10px;
-  overflow: auto;
-  height: calc(100vh - 40px);
-  max-width: 100%;
-}
-
-/* ===============================
    UNIVERSITÉS
 ================================ */
 .liste-universites {
@@ -348,9 +242,7 @@ nav.navbar {
   gap: 20px;
 }
 
-/* ===============================
-   ORGANIGRAMME
-================================ */
+/*ORGANIGRAMME*/
 .org-chart {
   width: 100%;
   margin: 0 auto;
@@ -399,48 +291,54 @@ nav.navbar {
   transform: translateX(-50%);
 }
 
-/* ===============================
-   FOOTER
-================================ */
+/*FOOTER */
 footer {
   background-color: green;
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  width: 100vw;
+  width: 100%;
   border-top: 3px solid #fff;
   position: relative;
-  left: 0;
-  margin-left: -25px;
-  margin-bottom: -25px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.conteneur {
+  background: #9fbbc2; border-left: 4px solid #2c3e50;
+  padding: clamp(1rem, 3vw, 2.5rem); margin: 2rem auto;
+  width: min(800px, calc(100% - 2rem));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.conteneur p {
+  font: 500 clamp(1rem, 2.5vw, 1.25rem)/1.6 'Helvetica', sans-serif;
+  color: #2c3e50; padding-left: 1.5rem;
+  position: relative;
+}
+.conteneur p::before {
+  content: "›"; position: absolute; left: 0;
+  color: #3498db; font-size: 1.5em;
+}
+.visually-hidden {
+  position: absolute; clip: rect(0 0 0 0); 
+  width: 1px; height: 1px; margin: -1px;
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================ */
+
+
+
+/* RESPONSIVITE AVEC MEDIA QUERY */
+@media (max-width: 992px) {
+  footer {
+    padding: 15px 0;
+  }
+}
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 0;
-    border-bottom: 1px solid blue;
-  }
-
-  .card,
-  .container,
-  .main-container {
-    margin-left: 0;
-  }
-
   .carousel-container {
     width: 90%;
   }
-
-  nav.navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 0.5rem;
+  footer {
+    padding: 12px 0;
+    border-top-width: 2px;
   }
 
   #content-window {
@@ -451,9 +349,12 @@ footer {
     padding: 15px;
   }
 
-  .contenu {
+  .conteneur {
     padding: 5px;
-    height: calc(100vh - 60px);
+    border-radius: 3px;
+    border-color: #000
+    
+    
   }
 
   .org-level {
@@ -467,6 +368,15 @@ footer {
 
   .connector {
     display: none;
+  }
+
+  .dropdown-item,
+  .fas {
+    width: 70px;
+  }
+  .footer{
+    width: calc(100vw - 70px);
+    margin-right: auto;
   }
 }
 
@@ -486,5 +396,11 @@ footer {
   .contenu {
     padding: 2px;
     font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    padding: 10px 0;
+    font-size: 0.9rem;
   }
 }

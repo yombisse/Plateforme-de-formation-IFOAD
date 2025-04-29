@@ -1,0 +1,192 @@
+
+/* Styles de base pour la navbar */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 100;
+  }
+  
+  .navbar-brand-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand-img {
+    margin-right: 10px;
+  }
+  
+  .main-container,
+  .card,
+  .container {
+    margin-left: 0;
+    padding: 1rem;
+    background-color: #f5f7fa;
+  }
+
+.navbar-nav {
+    
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contenu des onglets */
+.contenu-section {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+/* Sous-onglets */
+.sous-onglets {
+  background-color: #f8f9fa;
+  border-left: 3px solid #0d6efd;
+  margin-left: 15px;
+}
+
+
+/* Styles responsive */
+@media (max-width: 992px) {
+    .logo-ujkz{
+        position: fixed;
+        right:15% ;
+    }
+    logo1{
+        display: none;
+    }
+    .navbar-toggler{
+        position: fixed;
+        right:0% ;
+    }
+  .navbar-collapse {
+    background-color: rgb(231, 70, 70);
+    position: fixed;
+    top: 10%;
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajuste précisément le centrage */
+    width: 30%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Version responsive */
+
+  
+  
+  .navbar-nav {
+    flex-direction: column;
+    
+    margin-right: 1rem;
+  }
+  
+  .nav-item {
+    margin-bottom: 5px;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .sous-onglets {
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenu-section {
+    padding: 15px;
+  }
+  
+  .navbar-brand img,
+  .logo-ifoad img {
+    width: 70px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .contenu-section {
+    padding: 10px;
+  }
+  
+  .contenu-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .contenu-section h3 {
+    font-size: 1.1rem;
+  }
+  .navbar-collapse {
+    width: 50%; /* Encore plus large sur mobiles */
+    top: 10%;
+}
+}
+
+
+/* Fenêtre modale responsive */
+.modal-dialog {
+  max-width: 95%;
+  margin: 10px auto;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-dialog {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-dialog {
+    max-width: 1100px;
+  }
+}

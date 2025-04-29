@@ -1,0 +1,96 @@
+/* ----- Sidebar responsive ----- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background-color: #343a40;
+    overflow-y: auto;
+    z-index: 1030;
+    padding-top: 1rem;
+  }
+  
+  .sidebar .nav-link {
+    color: #fff;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+  }
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+      width: 70px;
+    }
+  
+    .sidebar .nav-link {
+      justify-content: center;
+      font-size: 0;
+    }
+  
+    .sidebar .nav-link i {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  
+    .main-container {
+      margin-left: 70px;
+    }
+
+  
+  /* ----- Main content adapts to sidebar ----- */
+  main {
+    margin-left: 220px;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 767.98px) {
+    main {
+      margin-left: 70px;
+    }
+  }
+  
+  /* ----- Logos d'universités ----- */
+  .universite-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .universite-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #212529;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .universite-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .universite-logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  
+  /* ----- Section Autres ----- */
+  .autres-section .universite-item {
+    font-weight: 500;
+  }
+}
+  
+  @media (max-width: 576px) {
+    .universite-logo {
+      max-width: 70px;
+    }
+  }
+  
